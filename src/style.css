@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Pattaya&family=Sen&family=Tangerine:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@plugin "daisyui";
+
+@theme {
+  --font-customH1: "Dancing Script", cursive;
+  --font-custom: "Sen", sans-serif;
+  --color-twilight: #c3b0a5;
+  --color-clay: #ded4cb;
+  --color-forest: #bad4b5;
+  --color-cabin: #704214;
+  --color-fog: #fefefe;
+  --color-custom: #6a7554;
+}
+
+/* 🔧 Apply autofill fix to all relevant inputs */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #fefefe inset !important; /* Match --color-fog */
+  -webkit-box-shadow: 0 0 0px 1000px #fefefe inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ✅ Tailwind + DaisyUI styling */
+body {
+  @apply bg-fog font-custom;
+}
+
+h1,
+h2 {
+  @apply font-customH1;
+}
